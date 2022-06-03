@@ -1,0 +1,85 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Press Start 2P";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(189, 61, 39);
+}
+h1 {
+  margin: 2rem auto;
+  color: #fff;
+}
+.span {
+  background: #fff;
+  width: 100%;
+  padding: 1rem 0rem;
+  text-align: center;
+  border-radius: 6px;
+}
+span {
+  width: 100%;
+  padding: 1rem 0rem;
+  text-align: center;
+  animation: timeSpan 1s infinite;
+}
+@keyframes timeSpan {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  display: grid;
+  place-items: center;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background: tomato;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  animation: entrada 1s;
+  position: relative;
+}
+.container::after {
+  content: "@ab_santin_";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #fff;
+}
+@keyframes entrada {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 6px;
+}
+.ativado {
+  animation: none;
+}
+.btn:hover {
+  background: #eee;
+  color: #333;
+}
